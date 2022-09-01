@@ -31,9 +31,24 @@ void PrintArray(int[,] matrix)
     }
 }
 
-void Average(int[,]matrix)
+void Average(int[,] matrix)
 {
 
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        double aver = 0;
+        int sumrows = 0;
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            sumrows = sumrows + matrix[i, j];
+        }
+        aver = (double)sumrows / matrix.GetLength(0);
+        System.Console.WriteLine($"Среднее арифметическое строки{i} = {aver}");
 
-    
+    }
+
 }
+
+int[,] array = CreateMatrix(4, 4);
+PrintArray(array);
+Average(array);

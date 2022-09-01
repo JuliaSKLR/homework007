@@ -19,7 +19,7 @@ double[,] CreateMatrix(int rows, int columns)
     {
         for (int j = 0; j < columns; j++)
         {
-            answer[i, j] = rnd.Next(-10, 10)/rnd.NextDouble();
+            answer[i, j] = rnd.Next(-10, 10) / rnd.NextDouble();
         }
     }
     return answer;
