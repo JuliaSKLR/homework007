@@ -48,12 +48,12 @@ void PrintNumSearch(int[,] array)
         System.Console.WriteLine("Аргументы массива не могут быть отрицательными");
         }
 
-    if (x > array.GetLength(0) || y > array.GetLength(1))
+    else if (x > array.GetLength(0) || y > array.GetLength(1))
         {
         Console.WriteLine("В данном массиве нет такой позиции");
         }
 
-    Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x, y]}");
+    else Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x, y]}");
 }
 int[,] array = CreateMatrix(5, 5);
 PrintArray(array);
