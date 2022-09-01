@@ -6,8 +6,7 @@
 int Prompt(string message)
 {
     System.Console.Write(message);
-    string readValue = Console.ReadLine();
-    int result = int.Parse(readValue);
+    int result = int.Parse(Console.ReadLine());
     return result;
 }
 
@@ -35,7 +34,6 @@ void PrintArray(double[,] array)
         }
         Console.WriteLine();
     }
-    Console.WriteLine();
 }
 
 int rows = Prompt("Введите колличество строк = ");

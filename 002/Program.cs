@@ -40,8 +40,8 @@ int Prompt(string message)
 
 void PrintNumSearch(int[,] array)
 {
-    int x = Prompt("ВВедите значение строки ");
-    int y = Prompt("Введите значение столбца ");
+    int x = Prompt("ВВедите значение строки: ");
+    int y = Prompt("Введите значение столбца: ");
 
     if (x < 0 || y < 0)
         {
@@ -53,7 +53,7 @@ void PrintNumSearch(int[,] array)
         Console.WriteLine("В данном массиве нет такой позиции");
         }
 
-    else Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x, y]}");
+    else Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x-1, y-1]}");
 }
 int[,] array = CreateMatrix(5, 5);
 PrintArray(array);
