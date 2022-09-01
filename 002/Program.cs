@@ -38,9 +38,6 @@ int Prompt(string message)
     return result; 
 }
 
-int [,]array = CreateMatrix(5,5);
-PrintArray(array);
-
 void PrintNumSearch(int[,]array)
 {
     int x = Prompt("ВВедите значение строки");
@@ -53,5 +50,6 @@ void PrintNumSearch(int[,]array)
 
 
 }
-
+int [,]array = CreateMatrix(5,5);
+PrintArray(array);
 PrintNumSearch(array);
