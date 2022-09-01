@@ -33,23 +33,28 @@ void PrintArray(int[,] matrix)
 
 int Prompt(string message)
 {
-    System.Console.Write(message); 
-    int result = Convert.ToInt32(Console.ReadLine()); 
-    return result; 
+    System.Console.Write(message);
+    int result = Convert.ToInt32(Console.ReadLine());
+    return result;
 }
 
-void PrintNumSearch(int[,]array)
+void PrintNumSearch(int[,] array)
 {
-    int x = Prompt("ВВедите значение строки");
-    int y = Prompt("Введите значение столбца");
-    if (x>array.GetLength(0) || y > array.GetLength(1) )
-    {
+    int x = Prompt("ВВедите значение строки ");
+    int y = Prompt("Введите значение столбца ");
+
+    if (x < 0 || y < 0)
+        {
+        System.Console.WriteLine("Аргументы массива не могут быть отрицательными");
+        }
+
+    if (x > array.GetLength(0) || y > array.GetLength(1))
+        {
         Console.WriteLine("В данном массиве нет такой позиции");
-    }
-    Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x,y]}");
+        }
 
-
+    Console.WriteLine($"В данном массиве на позиции [{x},{y}] находится элемент со значением {array[x, y]}");
 }
-int [,]array = CreateMatrix(5,5);
+int[,] array = CreateMatrix(5, 5);
 PrintArray(array);
 PrintNumSearch(array);
